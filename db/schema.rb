@@ -23,22 +23,22 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_150721) do
   create_table "favourites", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id", null: false
-    t.bigint "items_id", null: false
-    t.index ["items_id"], name: "index_favourites_on_items_id"
-    t.index ["users_id"], name: "index_favourites_on_users_id"
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
+    t.index ["item_id"], name: "index_favourites_on_item_id"
+    t.index ["user_id"], name: "index_favourites_on_user_id"
   end
 
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.decimal "price"
-    t.bigint "users_id", null: false
-    t.bigint "categories_id", null: false
+    t.float "price"
+    t.bigint "user_id", null: false
+    t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["categories_id"], name: "index_items_on_categories_id"
-    t.index ["users_id"], name: "index_items_on_users_id"
+    t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -52,12 +52,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_150721) do
     t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id", null: false
-    t.bigint "items_id", null: false
-    t.bigint "reviews_id", null: false
-    t.index ["items_id"], name: "index_transactions_on_items_id"
-    t.index ["reviews_id"], name: "index_transactions_on_reviews_id"
-    t.index ["users_id"], name: "index_transactions_on_users_id"
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
+    t.bigint "review_id", null: false
+    t.index ["item_id"], name: "index_transactions_on_item_id"
+    t.index ["review_id"], name: "index_transactions_on_review_id"
+    t.index ["user_id"], name: "index_transactions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -75,11 +75,11 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_150721) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "favourites", "items", column: "items_id"
-  add_foreign_key "favourites", "users", column: "users_id"
-  add_foreign_key "items", "categories", column: "categories_id"
-  add_foreign_key "items", "users", column: "users_id"
-  add_foreign_key "transactions", "items", column: "items_id"
-  add_foreign_key "transactions", "reviews", column: "reviews_id"
-  add_foreign_key "transactions", "users", column: "users_id"
+  add_foreign_key "favourites", "items"
+  add_foreign_key "favourites", "users"
+  add_foreign_key "items", "categories"
+  add_foreign_key "items", "users"
+  add_foreign_key "transactions", "items"
+  add_foreign_key "transactions", "reviews"
+  add_foreign_key "transactions", "users"
 end
