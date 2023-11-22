@@ -1,13 +1,18 @@
 .navbar-recloset {
-  background: #FF60B3;
+  background-color: #91a7d9;
   padding: 10px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  color: #ffff;
+}
 
   a {
-    color:white;
+    color:#ffff;
+    font-family: 'Poppins', sans-serif;
   }
 
   .navbar-options {
@@ -16,7 +21,7 @@
   form {
     width: 500px;
   }
-}
+
 
 .navbar-logo {
   font-size: 28px;
@@ -24,8 +29,8 @@
 }
 
 .dropdown-menu {
-
-  a{
-    color:black;
+  background-color: #ffff;
+  a {
+    color:#91a7d9;
   }
 }
