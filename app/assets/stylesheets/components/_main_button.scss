@@ -1,0 +1,14 @@
+.btn-main {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  background-color: #FF60B3;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-main:hover {
+  opacity: 0.8;
+}
