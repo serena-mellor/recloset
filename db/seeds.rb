@@ -31,3 +31,4 @@ Transaction.create!(item: shoe, user: gavin, review: three, price: 10.5)
 
 Favourite.create!(item: hat, user: serena)
 Favourite.create!(item: dress, user: camilla)
+
