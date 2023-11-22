@@ -1,0 +1,14 @@
+.btn-secondary {
+  color: #FF60B3;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  background-color: #ff60b25b;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary:hover {
+  opacity: 0.8;
+}

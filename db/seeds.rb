@@ -2,8 +2,9 @@
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
-Review.destroy_all
+Favourite.destroy_all
 Transaction.destroy_all
+Review.destroy_all
 Item.destroy_all
 Category.destroy_all
 User.destroy_all

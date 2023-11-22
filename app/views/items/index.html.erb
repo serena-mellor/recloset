@@ -1,0 +1,11 @@
+<% if @category %>
+  <h3>Category: <%= @category.name %></h3>
+<% end %>
+<% @items.each do |item| %>
+<ul>
+  <li><%= item.name.capitalize %></li>
+  <li><%= item.description.capitalize %></li>
+  <li><%= item.price %>€</li>
+  <li><%= item.user.first_name + " " + item.user.last_name%></li>
+  </ul>
+<% end %>
