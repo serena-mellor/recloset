@@ -5,7 +5,6 @@ body {
 }
 
 .banner {
-  margin-top: 40px;
   background-size: cover;
   background-position: center;
   padding: 150px 0;
@@ -16,12 +15,12 @@ body {
 .banner h1 {
   text-align: center;
   margin: 0;
-  color: black;
+  color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 80px;
   font-family: 'Poppins', sans-serif;
   //font-family: 'Bebas Neue', sans-serif;
-  //font-weight: bold;
+  font-weight: bold;
   letter-spacing: 5px;
   padding-bottom: 15px;
 }
@@ -29,7 +28,7 @@ body {
 .banner h3 {
   text-align: center;
   margin: 0;
-  color: black;
+  color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
@@ -64,6 +63,8 @@ body {
 
 .cards {
   margin-top: 30px;
+  font-family: 'poppins', sans-serif;
+  margin-bottom: 40px
 }
 
 .card {
@@ -84,12 +85,13 @@ a {
   border-radius: 30%;
 }
 
-.fa-heart {
+.card .fa-heart {
   position: absolute;
   top: 18px;
   right: 10px;
   &:hover {
     transform: scale(1.1);
+    color: red;
   }
 }
 
@@ -98,4 +100,33 @@ a {
   bottom: 5px;
   right: 20px;
   font-size: 19px;
+}
+
+.category-names {
+  font-family: 'Poppins', sans-serif;
+  color: #91a7d9;
+  //color: #FF60B3;
+  letter-spacing: 4px;
+  font-weight: lighter;
+}
+
+.container-fluid {
+  background-color: white;
+}
+
+.item-title {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.item-text {
+  font-size: 16px;
+  font-weight: lighter;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.card-body {
+  width:100%;
 }

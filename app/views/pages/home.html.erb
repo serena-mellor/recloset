@@ -1,16 +1,6 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <title>Home</title>
-</head>
-<body>
-  <section class="banner">
-    <div class="container">
+
+  <section class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_url("clothes_header.jpg") %>);">
+    <div>
       <h1>ReCloset</h1>
       <h3>Revamp your closet. Fashion for everyone.</h3>
     </div>
@@ -22,7 +12,7 @@
       <% 6.times do %>
         <div class="col-lg-2">
           <div class="rectangle">
-          <p>Category</p>
+          <p class="category-names">CATEGORY</p>
           </div>
         </div>
       <% end %>
@@ -33,14 +23,11 @@
     <h3 class="section-header">New Products</h3>
     <div class= "container-fluid">
       <div class="row gx-5 gy-5">
-        <% 8.times do %>
+        <% Item.all.each do |item|%>
           <div class="col-lg-3">
-            <%= render "items/item-card" %>
+            <%= render "items/item-card", item: item %>
           </div>
         <% end %>
       </div>
     </div>
   </section>
-
-</body>
-</html>
