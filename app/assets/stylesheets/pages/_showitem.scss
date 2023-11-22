@@ -1,6 +1,6 @@
 .item-image-container {
   display: flex;
-  width: 66%;
+
   background-color: rgb(223, 121, 223);
   padding: 8px;
   gap: 8px;
@@ -82,7 +82,7 @@
 .selected_item_container {
   display: flex;
   flex-wrap: wrap;
-  width: 33%;
+
   background-color: #e6f7ff; /* Different background color */
   border: 1px solid #66b3ff; /* Different border color */
   border-radius: 15px; /* Different border-radius */
