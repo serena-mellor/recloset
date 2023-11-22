@@ -1,0 +1,93 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+.tiles_container, .selected_item_container, .seller_profile_container,
+.container, .seller_items_one_container, .seller_items_two_container, .seller_items_three_container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rectangle-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inner-box {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  margin: 0 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+.button-primary, .button-secondary {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.button-secondary {
+  background-color: #ecf0f1;
+  color: #333;
+}
+
+.seller_profile_container h2 {
+  color: #e74c3c;
+}
+
+.seller_items_one_container, .seller_items_two_container, .seller_items_three_container {
+  text-align: center;
+}
+
+.seller_items_one_container button,
+.seller_items_two_container button,
+.seller_items_three_container button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Add these styles to your existing CSS */
+
+.profile-image {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+  border-radius: 50%; /* Create a circular shape for the image */
+  margin-bottom: 10px; /* Add margin for spacing */
+  object-fit: cover; /* Maintain the aspect ratio and cover the container */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
