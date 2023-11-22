@@ -6,13 +6,9 @@
         CATEGORIES
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownTest">
-        <a class="dropdown-item" href="#">Women</a>
-        <a class="dropdown-item" href="#">Men</a>
-        <a class="dropdown-item" href="#">Kids</a>
-        <a class="dropdown-item" href="#">Home</a>
-        <a class="dropdown-item" href="#">Entertainment</a>
-        <a class="dropdown-item" href="#">Pet care</a>
-        <a class="dropdown-item" href="#">Accessories</a>
+        <% Category.all.each do |category| %>
+          <%= link_to category.name, items_path(category: category.name), class:"dropdown-item" %>
+        <% end %>
       </div>
     </div>
   </div>
