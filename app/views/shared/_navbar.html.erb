@@ -1,18 +1,14 @@
 <nav class="navbar-recloset">
   <div class="d-flex">
-    <%= link_to "RECLOSET", root_path, class: "navbar-logo"  %>
+    <%= link_to "ReCloset", root_path, class: "navbar-logo"  %>
     <div class="navbar-options d-flex align-items-center justify-content-between">
       <a class="nav-link dropdown-toggle ms-5" href="#" id="navbarDropdownTest" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         CATEGORIES
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownTest">
-        <a class="dropdown-item" href="#">Women</a>
-        <a class="dropdown-item" href="#">Men</a>
-        <a class="dropdown-item" href="#">Kids</a>
-        <a class="dropdown-item" href="#">Home</a>
-        <a class="dropdown-item" href="#">Entertainment</a>
-        <a class="dropdown-item" href="#">Pet care</a>
-        <a class="dropdown-item" href="#">Accessories</a>
+        <% Category.all.each do |category| %>
+          <%= link_to category.name, items_path(category: category.name), class:"dropdown-item" %>
+        <% end %>
       </div>
     </div>
   </div>
