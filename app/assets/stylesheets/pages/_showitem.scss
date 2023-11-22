@@ -49,6 +49,8 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.tiles_container, .selected_item_container, .seller_profile_container, .seller_items_one_container, .seller_items_two_container, .seller_items_three_container {
+  background-color: #fff;
 /* Style for the inner boxes */
 .inner-rectangle {
   width: 50px; /* Adjust the width as needed */
