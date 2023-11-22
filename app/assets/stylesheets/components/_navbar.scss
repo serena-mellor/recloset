@@ -1,12 +1,31 @@
-.navbar-lewagon {
+.navbar-recloset {
+  background: #FF60B3;
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: white;
+
+  a {
+    color:white;
+  }
+
+  .navbar-options {
+    margin-left: 10px;
+  }
+  form {
+    width: 500px;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-logo {
+  font-size: 28px;
+  font-weight: 600;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.dropdown-menu {
+
+  a{
+    color:black;
+  }
 }
