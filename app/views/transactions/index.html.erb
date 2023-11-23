@@ -1,14 +1,19 @@
-<h3>My orders</h3>
+<h3 class="transactions-header">My orders</h3>
 
-<% @transactions.each do |transaction| %>
-  <%= transaction.item.name %>
-<% end %>
-</div>
-
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
+<div class="surrounding-container">
+  <% @transactions.each do |transaction| %>
+    <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="d-flex justify-content-between flex-grow-1 align-items-center">
+        <div class="card-product-infos">
+          <h4><%= transaction.item.name %></h4>
+          <p><%= transaction.item.description %></p>
+          <p class="transaction-price">€<%= transaction.item.price %></p>
+        </div>
+      <div class="card-product-status">
+        <p>ORDER CONFIRMED</p>
+      </div>
+      </div>
+    </div>
+  <% end %>
 </div>
