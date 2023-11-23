@@ -1,19 +1,53 @@
-<h3 class="transactions-header">My orders</h3>
+
+<div class="modal-container">
+  <h3 class="transactions-header">My orders</h3>
 
 <div class="surrounding-container">
   <% @transactions.each do |transaction| %>
     <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="d-flex justify-content-between flex-grow-1 align-items-center">
-        <div class="card-product-infos">
-          <h4><%= transaction.item.name %></h4>
-          <p><%= transaction.item.description %></p>
-          <p class="transaction-price">€<%= transaction.item.price %></p>
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="component-wrapper">
+          <div class="card-and-trans-wrapper">
+            <div class="card-product-infos">
+              <h4><%= transaction.item.name %></h4>
+              <p><%= transaction.item.description %></p>
+              <p class="transaction-price">€<%= transaction.item.price %></p>
+            </div>
+            <div class="card-product-status">
+              <p>ORDER CONFIRMED</p>
+            </div>
+          </div>
+          <div class="order-details-container">
+            <!-- Button trigger modal -->
+            <!-- type="button" -->
+            <a id="btn-order-details" class="btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              View order details
+            </a>
+          </div>
         </div>
-      <div class="card-product-status">
-        <p>ORDER CONFIRMED</p>
       </div>
+  <% end %>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Order details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p> Your order has been confirmed. You will receive a confirmation email with tracking information once your order has been dispatched.</p>
+        <p><strong>Shipping details</p></strong>
+        <p>Please allow 5-7 business days for your package to arrive. You will receive a confirmation email with tracking information once your order has been dispatched."
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
-  <% end %>
+  </div>
 </div>
