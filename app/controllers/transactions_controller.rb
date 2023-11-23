@@ -9,7 +9,6 @@ class TransactionsController < ApplicationController
     item = Item.find(params[:id])
     @transaction.item = item
     @transaction.price = item.price
-    raise
     if @transaction.save
       redirect_to root_path
     else
