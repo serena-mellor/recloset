@@ -1,0 +1,49 @@
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.profile-head{
+  align-content: space-between;
+}
+
+.emp-profile{
+  padding: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+.profile-head h5{
+  color: #333;
+}
+.profile-head h6{
+  color: #A5C0F9;
+}
+
+.profile-head .nav-tabs{
+  margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+  font-weight:400;
+  border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+  border: none;
+  border-bottom:2px solid #A5C0F9;
+}
+.profile-tab label{
+  font-weight: 400;
+}
+.profile-tab p{
+  font-weight: 400;
+  color: black;
+}
+
+.avatar {
+  width: 150px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.nav-item:not(.active) a.nav-link {
+  color: black;
+}
