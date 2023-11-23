@@ -22,6 +22,13 @@
   &:first-of-type { margin-bottom: 4px; }
 }
 
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffff;
+}
+
 /* body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -71,6 +78,9 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.tiles_container, .selected_item_container, .seller_profile_container, .seller_items_one_container, .seller_items_two_container, .seller_items_three_container {
+  background-color: #fff;
+}
 /* Style for the inner boxes */
 .inner-rectangle {
   width: 50px; /* Adjust the width as needed */
@@ -110,7 +120,7 @@
 
 /* Add similar variations for other container classes */
 
-.container {
+.container.container-show {
   background-color: #fcf8e3; /* Different background color */
   border: 2px solid #d9b34a; /* Different border color and width */
   border-radius: 12px; /* Different border-radius */
