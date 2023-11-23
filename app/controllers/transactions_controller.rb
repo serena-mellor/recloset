@@ -1,6 +1,6 @@
 class TransactionsController < ApplicationController
-  def new
-    # @transaction = Transaction.new
+  def index
+    @transactions = Transaction.where(user: current_user)
   end
 
   def create
@@ -15,10 +15,4 @@ class TransactionsController < ApplicationController
       redirect_to item_path(item)
     end
   end
-
-  # private
-
-  # def item_params
-  #   params.require(:items).permit(:id)
-  # end
 end

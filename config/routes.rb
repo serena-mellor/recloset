@@ -14,4 +14,6 @@ Rails.application.routes.draw do
       get "/buy", to: "transactions#create", as: "buy"
     end
   end
+
+  resources :transactions, only: [:index]
 end
