@@ -14,15 +14,15 @@
     <!-- Container 2 -->
     <div class="col-lg-4">
       <div class="selected_item_container">
-        <h2>White Wool Sweater</h2>
-        <h3>€10</h3>
+        <h2><%= @item.name %></h2>
+        <h3><%= @item.price %></h3>
         <p>"BRAND: Gucci
           COLOUR: Ivory
           SIZE: M
           Description: Warm, new, worn few times, must have!"</p>
         <!-- Content goes here -->
         <div class="buttons">
-          <button class="button-primary">Buy</button>
+        <%= link_to "Buy", buy_item_path %>
           <button class="button-secondary">Add to Favourites ❤️ </button>
         </div>
       </div>

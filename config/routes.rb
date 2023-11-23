@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   resources :items, only: [:index]
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :items, only: [:show]
+  resources :items, only: [:show] do
+    member do
+      get "/buy", to: "transactions#create", as: "buy"
+    end
+  end
 end
