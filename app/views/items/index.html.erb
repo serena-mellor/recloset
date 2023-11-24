@@ -2,11 +2,19 @@
   <% if @category %>
     <h3>Category: <%= @category.name %></h3>
   <% end %>
+
   <div class="row gx-5 gy-5">
-    <% @items.each do |item| %>
-      <div class="col-lg-3">
-        <%= render "items/item-card", item: item %>
-      </div>
+    <% if @items.any? %>
+      <% if params[:query] %>
+        <h3>Your search results:</h3>
+      <% end %>
+      <% @items.each do |item| %>
+        <div class="col-lg-3">
+          <%= render "items/item-card", item: item %>
+        </div>
+      <% end %>
+    <% else %>
+      <h3>No items found</h3>
     <% end %>
   </div>
 </div>

@@ -14,57 +14,55 @@
     <!-- Container 2 -->
     <div class="col-lg-4">
       <div class="selected_item_container">
-        <h2>White Wool Sweater</h2>
-        <h3>€10</h3>
-        <p>"BRAND: Gucci
-          COLOUR: Ivory
-          SIZE: M
-          Description: Warm, new, worn few times, must have!"</p>
+        <h2><%= @item.name %></h2>
+        <h3>€<%= @item.price %></h3>
+          <p>
+          <%= @item.description %>
+            <%# BRAND: Gucci <br>
+            COLOUR: Ivory <br>
+            SIZE: M <br> %>
+           <%# DESCRIPTION: Warm, new, worn few times, must-have! %>
+          </p>
+
         <!-- Content goes here -->
         <div class="buttons">
-          <button class="button-primary">Buy</button>
-          <button class="button-secondary">Add to Favourites ❤️ </button>
+          <a href="" class="btn-main">Buy</a>
+          <a href="" class="btn-secondary">Add to Favourites ❤️ </a>
         </div>
       </div>
+      <div class="seller_profile_container">
+
+
+
+
+        <img src="<%= image_path('av2recloset.jpeg') %>" alt="avatar" class="profile-avatar">
+        <h2>sunshine007</h2>
+
+        <i class="fas fa-map-pin"></i>
+        <p>Barcelona</p>
+
+        <!-- Content goes here -->
+      </div>
+
     </div>
   </div>
 </div>
 
 
-<!-- Container 3 -->
-<div class="seller_profile_container">
-  <h2>sunshine007</h2>
-  <p>Barcelona</p>
-  <img src="path/to/profile-image.jpg" alt="Profile Image" class="profile-image">
-  <!-- Content goes here -->
-</div>
+
 
 <!-- Container 4 -->
-<div class="container container-show">
+
   <h2>More clothes from sunshine007:</h2>
-  <!-- Content goes here -->
-</div>
-
+  <section class="cards container-fluid">
+    <div class= "container-fluid">
+      <div class="row gx-5 gy-5">
+        <% Item.all.each do |item|%>
+          <div class="col-lg-3">
+            <%= render "items/item-card", item: item %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
 <!-- Container 5 -->
-<div class="seller_items_one_container">
-  <h2>Cute Jacket</h2>
-  <button class="button-primary">Button1</button>
-  <button class="button-primary">Button2</button>
-  <!-- Content goes here -->
-</div>
-
-<!-- Container 6 -->
-<div class="seller_items_two_container">
-  <h2>Fun Shirt</h2>
-  <button class="button-primary">Button1</button>
-  <button class="button-primary">Button2</button>
-  <!-- Content goes here -->
-</div>
-
-<!-- Container 7 -->
-<div class="seller_items_three_container">
-  <h2>Disco Pants</h2>
-  <button class="button-primary">Button1</button>
-  <button class="button-primary">Button2</button>
-  <!-- Content goes here -->
-</div>

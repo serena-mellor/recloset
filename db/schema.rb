@@ -79,7 +79,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_23_115145) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.decimal "price"
+    t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false

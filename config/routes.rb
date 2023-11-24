@@ -10,5 +10,12 @@ Rails.application.routes.draw do
   resources :favourites, only: [:create, :destroy]
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :items, only: [:show]
+  resources :users, only: [:show]
+  resources :items, only: [:show] do
+    member do
+      get "/buy", to: "transactions#create", as: "buy"
+    end
+  end
+
+  resources :transactions, only: [:index]
 end
