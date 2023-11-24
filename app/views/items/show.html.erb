@@ -8,9 +8,6 @@
 
         <%= cl_image_tag @item.cover.key, class: "item-image-large" %>
 
-
-
-
       </div>
     </div>
 
@@ -30,7 +27,7 @@
         <!-- Content goes here -->
         <div class="buttons">
           <%= button_to "Buy", item_transactions_path(@item), class:"btn-main" %>
-          <a href="" class="btn-secondary">Add to Favourites ❤️ </a>
+          <a href="" class="btn-secondary">Add to Favourites <i class="fa-solid fa-heart fa"></i> </a>
         </div>
       </div>
       <div class="seller_profile_container">
@@ -38,8 +35,8 @@
 
 
 
-        <img src="<%= image_path('av2recloset.jpeg') %>" alt="avatar" class="profile-avatar">
-        <h2>sunshine007</h2>
+        <img src="<%= image_path('https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1556048247/ymehhwjerbyrghdubep5.jpg') %>" alt="avatar" class="profile-avatar">
+        <h2><%= "Sandra" %></h2>
 
         <i class="fas fa-map-pin"></i>
         <p>Barcelona</p>
@@ -57,7 +54,7 @@
 
 <!-- Container 4 -->
 
-  <h2>More clothes from sunshine007:</h2>
+  <h2>More clothes from Sandra:</h2>
   <section class="cards container-fluid">
     <div class= "container-fluid">
       <div class="row gx-5 gy-5">
