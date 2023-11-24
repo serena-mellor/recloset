@@ -23,8 +23,6 @@ class ItemsController < ApplicationController
     # more logic needed?
   end
 
-  # Added methods
-
   def new
     @item = Item.new
   end
@@ -47,6 +45,5 @@ class ItemsController < ApplicationController
 
   def items_params
     params.require(:item).permit(:name, :description, :price, :category_id, :cover)
-    # permit category id/user id?
   end
 end
