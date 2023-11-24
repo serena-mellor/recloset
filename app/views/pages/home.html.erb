@@ -23,7 +23,7 @@
     <h3 class="section-header">New Products</h3>
     <div class= "container-fluid">
       <div class="row gx-5 gy-5">
-        <% Item.last(12).each do |item|%>
+        <% Item.first(12).each do |item|%>
           <div class="col-lg-3">
             <%= render "items/item-card", item: item %>
           </div>

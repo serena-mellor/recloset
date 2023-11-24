@@ -7,8 +7,15 @@
   transition: opacity 0.3s ease;
   background-color: #FF60B3;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border: none;
 }
 
 .btn-main:hover {
   opacity: 0.8;
+}
+
+.card .btn-main {
+  position: absolute;
+  bottom: 13px;
+  left: 16px;
 }

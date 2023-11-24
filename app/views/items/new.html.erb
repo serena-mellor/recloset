@@ -1,0 +1,13 @@
+<div class="upload-item-container">
+  <%= simple_form_for @item do |f| %>
+    <h2 class="header-create-form">Upload new product</h2>
+    <div class="upload-item-form">
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.association :category %>
+      <%= f.input :cover, as: :file %>
+      <%= f.submit class:"btn-main btn-create-item" %>
+    </div>
+  <% end %>
+</div>
