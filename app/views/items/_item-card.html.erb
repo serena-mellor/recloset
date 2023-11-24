@@ -17,7 +17,6 @@
         <i class="fa-solid fa-trash fa-xl"></i>
         <% end %>
       <% end %>
-
-     <p class="price"><%= item.price %> €</p>
+     <p class="price"><%= number_with_precision(item.price, precision: 2, strip_insignificant_zeros: true)%> €</p>
   </div>
 </div>

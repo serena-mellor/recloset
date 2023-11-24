@@ -5,13 +5,13 @@
 <div class="surrounding-container">
   <% @transactions.each do |transaction| %>
     <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <%= cl_image_tag transaction.item.cover.key, crop:"fill", width: 200 %>
         <div class="component-wrapper">
           <div class="card-and-trans-wrapper">
             <div class="card-product-infos">
               <h4><%= transaction.item.name %></h4>
               <p><%= transaction.item.description %></p>
-              <p class="transaction-price">€<%= transaction.item.price %></p>
+              <p class="transaction-price"><%= number_with_precision(transaction.item.price, precision: 2, strip_insignificant_zeros: true) %>€</p>
             </div>
             <div class="card-product-status">
               <p>ORDER CONFIRMED</p>

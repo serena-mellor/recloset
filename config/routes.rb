@@ -13,10 +13,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :users, only: [:show]
+
   resources :items, only: [:show, :index, :new, :create, :destroy] do
-    member do
-      get "/buy", to: "transactions#create", as: "buy"
-    end
+    resources :transactions, only: [:create]
   end
 
   resources :transactions, only: [:index]

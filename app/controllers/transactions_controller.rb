@@ -6,11 +6,11 @@ class TransactionsController < ApplicationController
   def create
     @transaction = Transaction.new
     @transaction.user = current_user
-    item = Item.find(params[:id])
+    item = Item.find(params[:item_id])
     @transaction.item = item
     @transaction.price = item.price
-    if @transaction.save
-      redirect_to root_path
+    if @transaction.save!
+      redirect_to transactions_path
     else
       redirect_to item_path(item)
     end
