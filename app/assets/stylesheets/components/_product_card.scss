@@ -8,7 +8,7 @@
   align-items: center;
   margin: 15px;
   border-radius: 5px;
-  // font-family: 'Poppins', 'sans-serif';
+  font-family: 'Poppins', 'sans-serif';
 
   .component-wrapper {
     display: flex;
@@ -65,4 +65,19 @@
   order: 1;
   flex-direction: column;
   align-items: center;
+}
+
+.modal-content {
+  border-radius: 5px;
+
+  .modal-body {
+    font-style: 'Poppins', 'sans-serif';
+  }
+}
+.modal-footer {
+  border: none;
+}
+
+.btn-secondary {
+  border: 0;
 }
