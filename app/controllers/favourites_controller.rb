@@ -12,8 +12,10 @@ class FavouritesController < ApplicationController
   end
 
   def destroy
-    favourite = Favourite.where(user_id: current_user.id, item_id: params[:item_id]).first
-    favourite.destroy
-    redirect_to root_path
+    @favourite = Favourite.where(user_id: current_user.id, item_id: params[:id]).first
+    @favourite.destroy
+    respond_to do |format|
+      format.json
+    end
   end
 end
