@@ -1,7 +1,7 @@
 <div class="card" style="width: 18rem;" class="container-fluid" data-controller="favourites">
   <% if current_user && current_user.favourites.pluck(:item_id).include?(item.id) %>
     <% user_favourite_item = item.favourites.find_by(user_id: current_user.id) %>
-    <%= link_to '<i class="fa-solid fa-heart fa-xl"></i>'.html_safe, favourite_path(user_favourite_item, item_id: item.id), data:{ turbo_method: :delete } %>
+    <%= link_to '<i class="fa-solid fa-heart fa-xl"></i>'.html_safe, favourite_path(user_favourite_item, item_id: item.id), data:{ turbo_method: :delete, item_id: item.id, action: 'click->favourites#deleteFavourite'} %>
   <% else %>
     <%= link_to '<i class="fa-regular fa-heart fa-xl"></i>'.html_safe, favourites_path({ item_id: item.id }), data: { turbo_method: :post, item_id: item.id, action: 'click->favourites#addFavourite'} %>
   <% end %>
