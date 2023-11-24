@@ -4,8 +4,8 @@
 #
 require "open-uri"
 
-Review.destroy_all
 Favourite.destroy_all
+Review.destroy_all
 Transaction.destroy_all
 Item.destroy_all
 Category.destroy_all
