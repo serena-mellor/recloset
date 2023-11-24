@@ -79,6 +79,7 @@
                                               <% Item.where(user: @user).each do |item|%>
                                                 <div class="col-lg-3">
                                                   <%= render "items/item-card", item: item %>
+
                                                 </div>
                                               <% end %>
                                             </div>
