@@ -14,9 +14,10 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :users, only: [:show]
   resources :items, only: [:show, :index, :new, :create] do
-    member do
-      get "/buy", to: "transactions#create", as: "buy"
-    end
+    resources :transactions, only: [:create]
+    #member do
+    #  get "/buy", to: "transactions#create", as: "buy"
+    #end
   end
 
   resources :transactions, only: [:index]

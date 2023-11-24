@@ -15,7 +15,7 @@
     <div class="col-lg-4">
       <div class="selected_item_container">
         <h2><%= @item.name %></h2>
-        <h3>€<%= @item.price %></h3>
+        <h3><%= number_with_precision(@item.price, precision: 2, strip_insignificant_zeros: true)%>€</h3>
           <p>
           <%= @item.description %>
             <%# BRAND: Gucci <br>
@@ -26,7 +26,7 @@
 
         <!-- Content goes here -->
         <div class="buttons">
-          <a href="" class="btn-main">Buy</a>
+          <%= button_to "Buy", item_transactions_path(@item), class:"btn-main" %>
           <a href="" class="btn-secondary">Add to Favourites <i class="fa-solid fa-heart fa"></i> </a>
         </div>
       </div>
