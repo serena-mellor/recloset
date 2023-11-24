@@ -1,6 +1,12 @@
-<div class="card" style="width: 18rem;">
-  <i class="fa-regular fa-heart fa-xl"></i>
-  <img class="card-img-top" src="https://media.istockphoto.com/id/1257563298/photo/fashion-clothes-on-a-rack-in-a-light-background-indoors-place-for-text.jpg?s=612x612&w=0&k=20&c=UTL3KlMvLkteLe_9l3QbMklBcyaKQM5j6mcDxxtTr4Y=" alt="Clothing Image">
+<div class="card" style="width: 18rem;" class="container-fluid" data-controller="favourites">
+  <% if current_user && current_user.favourites.pluck(:item_id).include?(item.id) %>
+    <% user_favourite_item = item.favourites.find_by(user_id: current_user.id) %>
+    <%= link_to '<i class="fa-solid fa-heart fa-xl"></i>'.html_safe, favourite_path(user_favourite_item, item_id: item.id), data:{ turbo_method: :delete } %>
+  <% else %>
+    <%= link_to '<i class="fa-regular fa-heart fa-xl"></i>'.html_safe, favourites_path({ item_id: item.id }), data: { turbo_method: :post, item_id: item.id, action: 'click->favourites#addFavourite'} %>
+  <% end %>
+  <% source = item.cover.attached? ? rails_blob_url(item.cover) : "https://media.istockphoto.com/id/1257563298/photo/fashion-clothes-on-a-rack-in-a-light-background-indoors-place-for-text.jpg?s=612x612&w=0&k=20&c=UTL3KlMvLkteLe_9l3QbMklBcyaKQM5j6mcDxxtTr4Y="%>
+  <img class="card-img-top" src=<%=source%> alt="Clothing Image">
   <div class="card-body">
     <h4 class="item-title"><%= item.name %></h4>
     <p class="item-text"><%= item.description %></p>
