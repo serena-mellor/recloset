@@ -1,6 +1,10 @@
 body{
   font-family: 'Poppins', sans-serif;
 }
+.edit-link{
+  color: #FF60B3;
+  font-weight: bold;
+}
 .profile-head{
   align-content: space-between;
 }
@@ -41,7 +45,7 @@ body{
 .avatar {
   width: 150px;
   border-radius: 50%;
-  padding: 10px;
+  margin: 15px;
 }
 
 .nav-item:not(.active) a.nav-link {
