@@ -1,13 +1,16 @@
+
 <div class="main-container">
+<div class="container">
   <div class="row">
     <div class="col-lg-8">
       <!-- Container 1 -->
       <div class="item-image-container">
-        <div class="item-image-large"></div>
-        <div class="item-image-duos">
-          <div class="item-image-small"></div>
-          <div class="item-image-small"></div>
-        </div>
+
+        <%= cl_image_tag @item.cover.key, class: "item-image-large" %>
+
+
+
+
       </div>
     </div>
 
@@ -45,6 +48,7 @@
       </div>
 
     </div>
+  </div>
   </div>
 </div>
 
