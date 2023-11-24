@@ -14,7 +14,6 @@ class ItemsController < ApplicationController
       SQL
       @items = @items.joins(:category).where(sql_query, query: params[:query])
     end
-  
   end
 
   def show
